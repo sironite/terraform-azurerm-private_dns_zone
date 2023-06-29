@@ -8,9 +8,9 @@ content: |-
 
   # Usage - Module
 
-  ## Network Watcher Flow Log
+  ## Private DNS zones
   ```hcl
-  {{ include "examples/network-watcher-flow-log-example/main.tf" }}
+  {{ include "examples/PrivateDNS/main.tf" }}
   ```
 
   {{ .Providers }}
