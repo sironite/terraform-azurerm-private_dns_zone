@@ -17,7 +17,7 @@ variable "soa_record_enabled" {
 variable "soa_record_email" {
   description = "The email address of the person responsible for this DNS zone."
   type    = string
-  default = "example@example.com"
+  default = "admin.${var.dns_zone_name}"
 }
 
 variable "soa_record_host" {
