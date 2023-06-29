@@ -20,16 +20,16 @@ variable "soa_record_email" {
   default     = "example@example.com"
 }
 
-variable "soa_record_host" {
-  description = "The host name of the name server that will be authoritative for this DNS zone."
-  type        = string
-  default     = "@"
+variable "soa_record_expire_time" {
+  description = "The expire time for this DNS zone."
+  type        = number
+  default     = 2419200
 }
 
 variable "soa_record_minimum_ttl" {
   description = "The minimum TTL for records in this DNS zone."
   type        = number
-  default     = 3600
+  default     = 10
 }
 
 variable "soa_record_refresh_time" {
@@ -41,13 +41,7 @@ variable "soa_record_refresh_time" {
 variable "soa_record_retry_time" {
   description = "The retry time for this DNS zone."
   type        = number
-  default     = 600
-}
-
-variable "soa_record_serial_number" {
-  description = "The serial number for this DNS zone."
-  type        = number
-  default     = 1
+  default     = 300
 }
 
 variable "soa_record_ttl" {
@@ -55,6 +49,13 @@ variable "soa_record_ttl" {
   type        = number
   default     = 3600
 }
+
+variable "soa_record_tags" {
+  description = "A mapping of tags to assign to the SOA record."
+  type        = map(string)
+  default     = {}
+}
+
 
 variable "tags" {
   description = "A mapping of tags to assign to the resource."

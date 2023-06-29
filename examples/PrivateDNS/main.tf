@@ -1,5 +1,5 @@
 module "private_dns_zone" {
-  source  = "siroe/private-dns-zone/azurerm"
+  source  = "sironite/private_dns_zone/azurerm"
   version = "X.Y.Z"
 
   dns_zone_name       = "example.com"
