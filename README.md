@@ -7,7 +7,7 @@
 ## Private DNS zones
 ```hcl
 module "private_dns_zone" {
-  source  = "siroe/private-dns-zone/azurerm"
+  source  = "sironite/private_dns_zone/azurerm"
   version = "X.Y.Z"
 
   dns_zone_name       = "example.com"
@@ -44,11 +44,11 @@ No modules.
 | resource\_group\_name | The name of the resource group in which to create the DNS zone. | `string` | yes |
 | soa\_record\_email | The email address of the person responsible for this DNS zone. | `string` | no |
 | soa\_record\_enabled | Whether or not to create a SOA record for this DNS zone. | `bool` | no |
-| soa\_record\_host | The host name of the name server that will be authoritative for this DNS zone. | `string` | no |
+| soa\_record\_expire\_time | The expire time for this DNS zone. | `number` | no |
 | soa\_record\_minimum\_ttl | The minimum TTL for records in this DNS zone. | `number` | no |
 | soa\_record\_refresh\_time | The refresh time for this DNS zone. | `number` | no |
 | soa\_record\_retry\_time | The retry time for this DNS zone. | `number` | no |
-| soa\_record\_serial\_number | The serial number for this DNS zone. | `number` | no |
+| soa\_record\_tags | A mapping of tags to assign to the SOA record. | `map(string)` | no |
 | soa\_record\_ttl | The TTL for this DNS zone. | `number` | no |
 | tags | A mapping of tags to assign to the resource. | `map(string)` | no |
 
